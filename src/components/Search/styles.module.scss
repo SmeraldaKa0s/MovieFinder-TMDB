@@ -1,0 +1,17 @@
+.form {
+  @apply flex justify-center items-center relative
+
+}
+
+.input {
+  @apply bg-transparent text-2xl pl-14 placeholder-white;
+  width: 100vh;
+  max-width: 100%; 
+}
+
+.search {
+  @apply text-3xl;
+          margin: 0px -25px;
+          z-index: 5;
+          transform: translateY(-10%)  translateX(-869px);
+}

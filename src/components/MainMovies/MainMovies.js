@@ -1,7 +1,12 @@
+import styles from "./styles.module.scss"; 
 
 const MainMovies = () => {
   return(
-    <div>Main Movies</div>
+    <div>
+      <section className={styles.MainMovies}>
+      Main Movies 
+      </section>
+    </div>
   )
 }
 

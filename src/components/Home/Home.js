@@ -1,7 +1,12 @@
 import styles from "./styles.module.scss"; 
 
-const Home = () => {
-  return <div className={styles.Home}>Home</div>;
-};
+const Home = () => (
+  <div>
+ <section className={styles.Home}>
+saadsd
+ </section>
+ </div> 
+
+);
 
 export default Home;

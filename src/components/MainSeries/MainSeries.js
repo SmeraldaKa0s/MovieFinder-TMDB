@@ -1,8 +1,12 @@
+import styles from "./styles.module.scss"; 
 
-const MainSeries = () => {
-  return(
-    <div>Main Series</div>
+const MainSeries = () => (
+    <div className={styles.MainSeries}>
+      <section>
+        Main  Series 
+      </section>
+    </div>
   )
-}
+
 
 export default MainSeries

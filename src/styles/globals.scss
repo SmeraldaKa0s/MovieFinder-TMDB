@@ -6,8 +6,12 @@
 @tailwind utilities;
 
 * {
+  @apply text-zinc-100 box-border p-0 m-0;
   font-family: "Space Mono", $default-font;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+}
+
+body{
+  @apply antialiased absolute w-full h-screen top-0 left-0 -z-10  min-h-screen bg-blend-multiply bg-black/80;
+  background-image: url("../assets/grain.png");
+  
 }

@@ -1,0 +1,15 @@
+.container{
+  @apply flex justify-between gap-1;  
+}
+
+.wrapp {
+  @apply flex-wrap gap-10;
+}
+
+.title {
+  @apply flex flex-col mb-24 mt-20 select-none;
+  
+  h2{
+    @apply text-gray-200 hover:text-white text-4xl font-semibold mb-10;
+  }
+}

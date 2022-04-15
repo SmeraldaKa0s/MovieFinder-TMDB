@@ -1,0 +1,27 @@
+.swiper {
+  width: 100%;
+  height: 70vh;
+  user-select: none;
+
+  .slideCard {
+    width: 100%;
+    position: relative;
+  
+  .title {
+    position: absolute;
+    top: 65%;
+    left: 10%;
+  }
+  }
+
+  .containerImg {
+    width: calc(100% - 100px);
+    margin: auto;
+  
+    img {
+      width: 100%;
+      height: 100%;      
+      object-fit: cover;
+    }
+  }
+}

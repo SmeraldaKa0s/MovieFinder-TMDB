@@ -1,10 +1,8 @@
 import styles from "./styles.module.scss";
 
-const Button = ({ title, color = "blue" }) => {
+const Button = ({ title, color = "blue", onClick }) => {
   return (
-   
-      <button className={styles.button}>{title}</button>
-
+      <button onClick={onClick} className={styles.button}>{title}</button>
   );
 };
 

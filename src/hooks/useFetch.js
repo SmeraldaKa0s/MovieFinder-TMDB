@@ -1,14 +1,17 @@
 import { useState, useEffect } from "react";
+import { useContext } from "react";
+import Context from "../context/Context";
 
 const apiKey = "8affe8be373f48968e6754586fd5924d"
 
 const useFetch = (id, type) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const context = useContext(Context);
 
   const getUrl = () => {
-    let url = `https://api.themoviedb.org/3/${type}/${id}?api_key=${apiKey}&language=es`
-    if (type === 'search') return `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&language=es&query=${id}`
+    let url = `https://api.themoviedb.org/3/${type}/${id}?api_key=${apiKey}&language=${context.language}`
+    if (type === 'search') return `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&language=${context.language}&query=${id}`
 
     return url;
   }
@@ -30,7 +33,7 @@ const useFetch = (id, type) => {
       }
     };
     fetchApi();
-  }, [id]);
+  }, [id, context]);
 
 
   return ({

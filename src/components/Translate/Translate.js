@@ -6,19 +6,22 @@ import Context from "../../context/Context";
 const Translate = () => {
   const context = useContext(Context);
 
-  const handleClickLanguage = (e) => {
-    context.setLanguage(e.target.value);
+  const handleClickLanguage = (value) => {
+    console.log(value)
+    context.setLanguage(value);
   };
 
   return (
     <div className={styles.container}>
       <Button 
-      onClick={handleClickLanguage} 
+      onClick={() => handleClickLanguage('es')} 
       title="ES" 
-      value="es" />
-      <Button onClick={handleClickLanguage} 
+     />
+      <Button 
+      onClick={() => handleClickLanguage('en')} 
+      
       title="EN" 
-      value="en" />
+     />
     </div>
   );
 };

@@ -1,0 +1,28 @@
+.container {
+  height: 500px;
+  
+  .containerImg {
+    width: 285px;
+    height: 425px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 10px;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+      transition: all 0.3s ease 0s, height 0s ease 0s;
+      border-radius: 10px;
+    }
+  }
+
+  .title {
+    @apply text-gray-200 mt-4 hover:text-white;
+    width: 285px;
+    white-space: wrap;
+  }
+}

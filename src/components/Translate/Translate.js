@@ -1,4 +1,5 @@
 import Button from "../Button/";
+import styles from "./styles.module.scss";
 import { useContext } from "react";
 import Context from "../../context/Context";
 
@@ -10,7 +11,7 @@ const Translate = () => {
   };
 
   return (
-    <div className="px-2">
+    <div className={styles.container}>
       <Button 
       onClick={handleClickLanguage} 
       title="ES" 

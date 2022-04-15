@@ -1,0 +1,10 @@
+.container {
+  @apply flex h-36 bg-gradient-to-t from-transparent to-red-700 items-center justify-between;
+  ul {
+    @apply flex text-4xl;
+    
+    .link {
+      @apply px-6;
+    }
+  }
+}

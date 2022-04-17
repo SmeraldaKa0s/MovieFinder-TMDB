@@ -1,10 +1,19 @@
 .container {
-  @apply flex h-36 bg-gradient-to-t from-transparent to-red-700 items-center justify-between;
+  @apply flex h-14 bg-gradient-to-t from-transparent  items-center justify-between;
+  border-bottom: 1px solid #EAEAEA;
   ul {
     @apply flex text-4xl;
     
     .link {
       @apply px-6;
     }
+  }
+
+  .input {
+    @apply bg-transparent text-2xl pl-14 placeholder-white outline-offset-2;
+    border-left: 1px solid #EAEAEA;
+    outline: none;
+
+  
   }
 }

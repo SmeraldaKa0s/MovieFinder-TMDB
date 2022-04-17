@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap');
 @import "./variables.scss";
 
 @tailwind base;
@@ -6,12 +6,12 @@
 @tailwind utilities;
 
 * {
-  @apply text-gray-200 box-border p-0 m-0;
+  @apply text-zinc-900 box-border p-0 m-0;
   font-family: "Space Mono", $default-font;
 }
 
 body{
-  @apply antialiased absolute w-full h-screen top-0 left-0 -z-10  min-h-screen bg-blend-multiply bg-black/80;
-  background-image: url("../assets/grain.png");
+  @apply antialiased absolute w-full h-screen top-0 left-0 -z-10  min-h-screen bg-blend-multiply bg-white;
+ 
   
 }

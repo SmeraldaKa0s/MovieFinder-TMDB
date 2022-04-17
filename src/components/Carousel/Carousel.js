@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper';
+import { Navigation, Pagination, Autoplay } from 'swiper';
 import ItemMovie from "../ItemMovie";
 
 import useFetch from "../../hooks/useFetch";
@@ -19,8 +19,12 @@ const Carousel = () => {
       spaceBetween={50}
       slidesPerView={1}
       navigation
-      modules={[Navigation, Pagination]}
+      modules={[Navigation, Pagination, Autoplay]}
       pagination={{ clickable: true }}
+      autoplay={{
+        delay: 4000,
+        disableOnInteraction: false,
+      }}
       scrollbar={{ draggable: true }}
 
     >

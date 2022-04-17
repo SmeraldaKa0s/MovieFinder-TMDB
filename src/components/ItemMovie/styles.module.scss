@@ -1,28 +1,32 @@
 .container {
-  height: 500px;
-  
+  @apply overflow-hidden;
+  width: 222px;
+
   .containerImg {
-    width: 285px;
-    height: 425px;
+    height: 325px;
     overflow: hidden;
+    border-radius: 10px;
 
     img {
-      width: 100%;
-      height: 100%;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      border-radius: 10px;
-    }
-
-    img:hover {
-      transform: scale(1.1);
-      transition: all 0.3s ease 0s, height 0s ease 0s;
-      border-radius: 10px;
+      @apply w-full h-full object-cover;
+      filter: grayscale(60%);
     }
   }
 
+  &:hover {
+    
+    img {
+      transform: scale(1.1);
+      transition: all 0.3s ease 0s, height 0s ease 0s;
+    }
+    
+    .title {
+      @apply block text-white mt-4 hover:text-white font-black absolute bottom-4 left-2 whitespace-pre-wrap text-ellipsis;
+      width: 285px;
+      filter: drop-shadow(3px 3px 3px rgba(0,0,0,1));
+    }
+  }
   .title {
-    @apply text-gray-200 mt-4 hover:text-white;
-    width: 285px;
-    white-space: wrap;
+    @apply hidden;
   }
 }

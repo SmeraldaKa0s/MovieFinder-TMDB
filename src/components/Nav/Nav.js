@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./styles.module.scss";
 import { BiHomeAlt as HomeIcon } from "react-icons/bi";
 import { AiOutlineVideoCamera as CameraIcon } from "react-icons/ai";
+import { RiSearch2Line as SearchIcon } from "react-icons/ri";
 import { MdMonitor as MonitorIcon } from "react-icons/md";
 import Translate from "../Translate";
 import { useState } from "react";
@@ -35,10 +36,14 @@ const Navbar = () => {
           </li>
         </Link>
         {window.location.pathname !== "/search" && (
-          <form onSubmit={onSubmit}>
+          <form className="flex align-center" onSubmit={onSubmit}>
+            <button>
+              <SearchIcon className="-mr-10 ml-8" />
+            </button>
             <input
               value={query}
               onInput={({ target }) => setQuery(target.value)}
+              className={styles.input}
             />
           </form>
         )}

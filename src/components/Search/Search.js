@@ -22,8 +22,6 @@ const Search = () => {
     setSearchParams({ q: value });
   };
 
-  console.log(results)
-
   return (
     <section className="px-24">
       <form

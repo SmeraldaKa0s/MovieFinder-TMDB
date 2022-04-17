@@ -1,24 +1,37 @@
 import styles from "./styles.module.scss";
 import ItemMovie from "../ItemMovie";
 import Loader from "../Loader/Loader";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper';
 
 const AllFilme = ({ title, isLoading, movies }) => {
   return (
-    <div className={styles.title}>
-      <h2>{title}</h2>
-      <Loader isLoading={isLoading} />
-      <div className={`${styles.container} ${movies.length > 5 ? styles.wrapp : ''}`}>
-        {movies.map((movie) => (
-          <ItemMovie
-            key={movie.id}
-            id={movie.id}
-            image={movie.poster_path ? movie.poster_path : movie.backdrop_path}
-            title={movie.name ? movie.name : movie.title}
-            type={movie.media_type === 'tv' ? 'tv' : 'movie'}
-          />
-        ))}
-      </div>
-    </div>
+    <section className={styles.section}>
+      <h2 className={styles.title}>{title}</h2>
+      <Swiper
+        className={styles.swiper}
+        spaceBetween={1}
+        slidesPerView={6}
+        navigation
+        modules={[Navigation]}
+      >
+        <div>
+          <Loader isLoading={isLoading} />
+          <div className={`${styles.container} ${movies.length > 5 ? styles.wrapp : ''}`}>
+            {movies.map((movie) => (
+              <SwiperSlide key={movie.id}>
+                <ItemMovie
+                  id={movie.id}
+                  image={movie.poster_path ? movie.poster_path : movie.backdrop_path}
+                  title={movie.name ? movie.name : movie.title}
+                  type={movie.name ? 'tv' : 'movie'}
+                />
+              </SwiperSlide>
+            ))}
+          </div>
+        </div>
+      </Swiper>
+    </section>
   );
 };
 

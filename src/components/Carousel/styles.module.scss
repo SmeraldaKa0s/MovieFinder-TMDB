@@ -6,22 +6,28 @@
   .slideCard {
     width: 100%;
     position: relative;
-  
-  .title {
-    position: absolute;
-    top: 65%;
-    left: 10%;
-  }
+
+    .title {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      color: white;
+      font-family: Nunito;
+      font-size: 3rem;
+      font-weight: 700;
+      filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.5));
+    }
   }
 
   .containerImg {
-    width: calc(100% - 100px);
+    width: 100%;
     margin: auto;
-  
+
     img {
       width: 100%;
-      height: 100%;      
+      height: 100%;
       object-fit: cover;
+      filter: grayscale(70%);
     }
   }
 }

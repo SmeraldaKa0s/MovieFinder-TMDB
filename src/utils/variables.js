@@ -13,4 +13,4 @@ export const upcomingMovies = `${baseUrl}upcoming?${apiKey}&language=en-US&page=
 export const nowPlayingMovies = `${baseUrl}now_playing?${apiKey}&language=en-US&page=1`;
 
 
-export const arrayCut = array => array.slice(0, 5);
+export const arrayCut = array => array.slice(0, 10);

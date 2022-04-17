@@ -17,6 +17,7 @@ const Home = () => {
       <section className={styles.home}>
         <Carousel /> 
         <AllFilme
+          className={styles.filme}
           title={context.language === "es" ? "Películas Populares" : "Popular Movies"}
           isLoading={isLoadingMovies}
           movies={arrayCut(movies)}
@@ -24,6 +25,7 @@ const Home = () => {
         />
 
         <AllFilme 
+        className={styles.filme}
          title="Popular Series"
          isLoading={isLoadingSeries}
          movies={arrayCut(series)}

@@ -10,8 +10,8 @@ const AllFilme = ({ title, isLoading, movies }) => {
       <h2 className={styles.title}>{title}</h2>
       <Swiper
         className={styles.swiper}
-        spaceBetween={1}
-        slidesPerView={6}
+        spaceBetween={5}
+        slidesPerView="auto"
         navigation
         modules={[Navigation]}
       >
@@ -19,7 +19,7 @@ const AllFilme = ({ title, isLoading, movies }) => {
           <Loader isLoading={isLoading} />
           <div className={`${styles.container} ${movies.length > 5 ? styles.wrapp : ''}`}>
             {movies.map((movie) => (
-              <SwiperSlide key={movie.id}>
+              <SwiperSlide className={styles.swiperSlide} key={movie.id}>
                 <ItemMovie
                   id={movie.id}
                   image={movie.poster_path ? movie.poster_path : movie.backdrop_path}

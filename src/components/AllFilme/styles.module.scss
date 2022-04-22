@@ -1,10 +1,15 @@
 .section {
-  @apply flex items-start my-12;
-  background: rgb(196,195,198);;
-  background: linear-gradient( 180deg, rgba(254, 254, 254, 1) 0%, rgba(254, 254, 254, 0.9) 30%, rgba(236, 236, 236, 0.5) 100% );
+  @apply flex items-start justify-end my-12;
+  background: rgb(196, 195, 198);
+  background: linear-gradient(
+    180deg,
+    rgba(254, 254, 254, 1) 0%,
+    rgba(254, 254, 254, 0.9) 30%,
+    rgba(236, 236, 236, 0.5) 100%
+  );
 
   .container {
-    @apply flex justify-between gap-1 bg-slate-400;
+    @apply flex justify-between gap-1 bg-slate-400 relative;
   }
 
   .wrapp {
@@ -12,7 +17,9 @@
   }
 
   .title {
-    @apply flex flex-col mb-24 mt-20 select-none ml-8 w-16 font-bold;
+    @apply flex flex-col select-none ml-8 w-16 font-bold px-2 overflow-hidden;
+    width: 222px;
+    height: 325px;
 
     h2 {
       @apply text-zinc-900 hover:text-black text-4xl font-semibold mb-10;
@@ -20,10 +27,21 @@
   }
 
   .swiper {
-    width: 80%;
-  }
-  
-      .swiper.swiper-button-next {
-        transform: translateX(-100px) !important;
+    @apply -ml-6 px-12 w-full select-none;
+
+    :global(.swiper-button-next),
+    :global(.swiper-button-prev) {
+      color: #555;
+
+      &:hover {
+        color: #eee;
+        filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
       }
+    }
+
+    .swiperSlide {
+      @apply overflow-hidden;
+      width: 222px;
+    }
+  }
 }

@@ -1,28 +1,24 @@
 .container {
-  @apply overflow-hidden;
-  width: 222px;
+  @apply relative overflow-hidden w-full;
 
   .containerImg {
+    @apply overflow-hidden rounded-xl;
     height: 325px;
-    overflow: hidden;
-    border-radius: 10px;
 
     img {
-      @apply w-full h-full object-cover;
+      @apply w-full h-full object-cover bg-gray-100 bg-gradient-to-b from-white to-gray-200;
       filter: grayscale(60%);
     }
   }
 
   &:hover {
-    
     img {
       transform: scale(1.1);
       transition: all 0.3s ease 0s, height 0s ease 0s;
     }
     
     .title {
-      @apply block text-white mt-4 hover:text-white font-black absolute bottom-4 left-2 whitespace-pre-wrap text-ellipsis;
-      width: 285px;
+      @apply block w-full text-white mt-4 hover:text-white font-black absolute bottom-4 left-2 overflow-hidden whitespace-pre-wrap text-ellipsis;
       filter: drop-shadow(3px 3px 3px rgba(0,0,0,1));
     }
   }

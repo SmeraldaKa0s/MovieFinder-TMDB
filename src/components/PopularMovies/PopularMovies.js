@@ -1,21 +1,17 @@
-import styles from "./styles.module.scss"; 
+import styles from "./styles.module.scss";
 import useFetch from "../../hooks/useFetch";
+import MoviesGrid from "../MoviesGrid";
 
 const PopularMovies = () => {
-  const { data: movies, isLoading} = useFetch( "popular", "movie")
+  const { data: movies, isLoading } = useFetch("popular", "movie")
 
-  return(
+  return (
     <div>
       <section className={styles.PopularMovies}>
-      <h2>Popular Movies</h2>
+        <h2>Popular Movies</h2>
 
-      {isLoading && <p>CARGANDOOOOOOOOOOOOOOOOOOOOO</p>}
+        <MoviesGrid movies={movies} />
 
-      {movies.map(pelicula => (
-        <h3 key={movies.id}>{pelicula.title}</h3>
-      ))}
-
-       
       </section>
     </div>
   )

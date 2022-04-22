@@ -11,10 +11,10 @@ import 'swiper/scss/pagination';
 import 'swiper/css/scrollbar';
 
 const Carousel = () => {
-  const { data: movies, isLoading } = useFetch("popular", "movie")
-  
+  const { data: movies, isLoading } = useFetch("popular", "movie");
+
   return (
-    <Swiper 
+    <Swiper
       className={styles.swiper}
       spaceBetween={50}
       slidesPerView={1}
@@ -25,8 +25,6 @@ const Carousel = () => {
         delay: 4000,
         disableOnInteraction: false,
       }}
-      scrollbar={{ draggable: true }}
-
     >
       {
         movies && movies.map(({ id, backdrop_path, title }) => (

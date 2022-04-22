@@ -1,16 +1,16 @@
-.form {
-  @apply flex justify-center items-center relative;
-}
+.section {
+  @apply flex flex-col justify-center;
 
-.input {
-  @apply bg-transparent text-2xl pl-14 placeholder-white;
-  width: 100vh;
-  max-width: 100%;
-}
+  .form {
+    @apply flex justify-center items-center relative;
+  }
 
-.search {
-  @apply text-3xl;
-  margin: 0px -10px;
-  z-index: 5;
-  transform: translateY(-10%) translateX(-869px);
+  .input {
+    @apply bg-transparent text-2xl pl-14 py-2 placeholder-white my-10 w-full max-w-3xl;
+    border-bottom: 3px solid rgba(55, 55, 55, 0.3);
+  }
+
+  .search {
+    @apply text-3xl z-10 -mr-10 p-2 select-none;
+  }
 }

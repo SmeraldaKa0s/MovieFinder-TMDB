@@ -37,7 +37,7 @@ const useFetch = (id, type) => {
 
 
   return ({
-    data: !data.length ? data : data.filter(data => data.media_type === "tv" || data.media_type === "movie" || !data.media_type ),
+    data,
     isLoading,
   })
 };

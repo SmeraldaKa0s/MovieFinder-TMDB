@@ -9,27 +9,25 @@ import Context from "../../context/Context";
 const Home = () => {
   const context = useContext(Context);
 
-  const { data: movies, isLoading: isLoadingMovies} = useFetch( "popular", "movie")
-  const { data: series, isLoading: isLoadingSeries} = useFetch( "popular", "tv")
+  const { data: movies, isLoading: isLoadingMovies} = useFetch("popular", "movie")
+  const { data: topRated, isLoading: isLoadingTopRated} = useFetch( "top_rated", "movie")
 
   return (
     <div>
       <section className={styles.home}>
-        <Carousel /> 
+        <Carousel type="movie" /> 
         <AllFilme
           className={styles.filme}
           title={context.language === "es" ? "Películas Populares" : "Popular Movies"}
           isLoading={isLoadingMovies}
           movies={arrayCut(movies)}
-          isTv={false}
         />
 
         <AllFilme 
         className={styles.filme}
-         title="Popular Series"
-         isLoading={isLoadingSeries}
-         movies={arrayCut(series)}
-         isTv={true}
+         title={context.language === "es" ? "Mejor puntuadas" : "Top Rated"}
+         isLoading={isLoadingTopRated}
+         movies={arrayCut(topRated)}
         />
       </section>
     </div>

@@ -13,15 +13,15 @@ const Translate = () => {
 
   return (
     <div className={styles.container}>
-      <Button 
-      onClick={() => handleClickLanguage('es')} 
-      title="ES" 
-     />
-      <Button 
-      onClick={() => handleClickLanguage('en')} 
-      
-      title="EN" 
-     />
+      <Button
+        onClick={() => handleClickLanguage('es')}
+        title="ES"
+      />
+      <Button
+        onClick={() => handleClickLanguage('en')}
+
+        title="EN"
+      />
     </div>
   );
 };

@@ -20,4 +20,8 @@
     @apply bg-transparent text-2xl pl-14 placeholder-white outline-offset-2;
     outline: none;
   }
+
+  .translate {
+    @apply self-end lg:absolute lg:right-0;
+  }
 }

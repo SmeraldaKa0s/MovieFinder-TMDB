@@ -10,7 +10,7 @@ import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import 'swiper/css/scrollbar';
 
-const Carousel = ({type}) => {
+const Carousel = ({ type }) => {
   const { data: movies, isLoading } = useFetch("now_playing", "movie");
 
   return (
@@ -18,13 +18,9 @@ const Carousel = ({type}) => {
       className={styles.swiper}
       spaceBetween={50}
       slidesPerView={1}
-      navigation
-      modules={[Navigation, Pagination, Autoplay]}
+      navigation={window && window.innerWidth > 1024}
+      modules={[Navigation, Pagination]}
       pagination={{ clickable: true }}
-      autoplay={{
-        delay: 4000,
-        disableOnInteraction: false,
-      }}
     >
       
       {

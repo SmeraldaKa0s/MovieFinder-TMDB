@@ -12,7 +12,7 @@ const AllFilme = ({ title, isLoading, movies }) => {
         className={styles.swiper}
         spaceBetween={5}
         slidesPerView="auto"
-        navigation
+        navigation={window && window.innerWidth > 1024}
         modules={[Navigation]}
       >
         <div>

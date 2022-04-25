@@ -1,5 +1,5 @@
 .section {
-  @apply flex items-start justify-end my-12;
+  @apply flex items-start justify-end my-12 flex-col lg:flex-row;
   background: rgb(196, 195, 198);
   background: linear-gradient(
     180deg,
@@ -17,9 +17,13 @@
   }
 
   .title {
-    @apply flex flex-col select-none ml-8 w-16 font-bold px-2 overflow-hidden;
+    @apply flex flex-col select-none ml-8 font-bold px-2 pb-3 lg:pb-0 overflow-hidden;
     width: 222px;
-    height: 325px;
+
+    @media ( min-width: 1024px) {
+      height: 325px;
+    }
+
 
     h2 {
       @apply text-zinc-900 hover:text-black text-4xl font-semibold mb-10;
@@ -27,7 +31,7 @@
   }
 
   .swiper {
-    @apply -ml-6 px-12 w-full select-none;
+    @apply lg:-ml-6 lg:px-12 w-full select-none;
 
     :global(.swiper-button-next),
     :global(.swiper-button-prev) {

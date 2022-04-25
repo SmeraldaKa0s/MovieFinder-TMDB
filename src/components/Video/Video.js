@@ -33,7 +33,7 @@ const Video = ({ handleClickCloseVideo, id }) => {
         >
         </iframe>
       }
-       <button onClick={handleClickCloseVideo}>
+      <button onClick={handleClickCloseVideo}>
         <CloseIcon className={styles.iconVideo} />
       </button>
     </div>

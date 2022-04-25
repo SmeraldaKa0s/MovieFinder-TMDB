@@ -35,10 +35,11 @@ const Navbar = () => {
             <MonitorIcon />
           </li>
         </Link>
+      </ul>
         {window.location.pathname !== "/search" && (
           <form className="flex align-center" onSubmit={onSubmit}>
             <button>
-              <SearchIcon className="-mr-10 ml-8" />
+              <SearchIcon className="-mr-10 ml-3" />
             </button>
             <input
               value={query}
@@ -47,8 +48,7 @@ const Navbar = () => {
             />
           </form>
         )}
-      </ul>
-      <div>
+      <div  className={styles.translate}>
         <Translate />
       </div>
     </nav>

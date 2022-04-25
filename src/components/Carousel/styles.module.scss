@@ -9,18 +9,18 @@
   }
 
   .slideCard {
-    @apply relative w-full;
+    @apply relative w-full h-full;
 
     .title {
-      @apply absolute text-5xl text-white;
+      @apply absolute text-5xl text-white ml-3;
       top: 40%;
       left: 10%;
       filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.5));
     }
 
     .buttonCarousel {
-      @apply flex items-center absolute text-2xl text-white ;
-      top: 45%;
+      @apply flex items-center absolute text-2xl text-white ml-3;
+      top: 50%;
       left: 11%;
       font-family: Nunito;
       filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.5));
@@ -33,7 +33,7 @@
 }
 
   .containerImg {
-    @apply w-full m-auto;
+    @apply w-full m-auto h-full;
 
     img {
       @apply w-full h-full object-cover;

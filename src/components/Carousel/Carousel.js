@@ -1,8 +1,8 @@
 import styles from "./styles.module.scss";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper';
-import ItemMovie from "../ItemMovie";
-
+import { Link } from "react-router-dom";
+import { IoIosArrowForward as ArrowButton } from "react-icons/io";
 import useFetch from "../../hooks/useFetch";
 
 import 'swiper/scss';
@@ -22,6 +22,7 @@ const Carousel = ({ type }) => {
       modules={[Navigation, Pagination]}
       pagination={{ clickable: true }}
     >
+      
       {
         movies && movies.map(({ id, backdrop_path, title }) => (
           <SwiperSlide key={id}>
@@ -32,9 +33,15 @@ const Carousel = ({ type }) => {
                   alt={title}
                 />
               </div>
-              <h3 className={styles.title}>
-                {title}
-              </h3>
+              <div>
+                <h3 className={styles.title}>
+                  {title && title.toUpperCase()}
+                </h3>
+                <Link to={`/${type}/${id}`} className={styles.buttonCarousel} >
+                  <button>See more</button>
+                  <ArrowButton className={styles.icon} />
+                </Link>
+              </div>
             </article>
           </SwiperSlide>
         ))

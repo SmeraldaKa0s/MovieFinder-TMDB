@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import Nav from "./components/Nav";
 import PopularMovies from "./components/PopularMovies";
 import MovieDetails from "./components/MovieDetails";
-import MainSeries from "./components/MainSeries";
+import UpcomingMovies from "./components/UpcomingMovies";
 import Error404 from "./components/Error404";
 import Footer from "./components/Footer";
 import Context from "./context/Context";
@@ -12,8 +12,9 @@ import Search from "./components/Search";
 
 import "./styles/globals.scss";
 
+
 const App = () => {
-  const [language, setLanguage] = useState("es");
+  const [language, setLanguage] = useState("en");
 
   const context = {
     language: language,
@@ -28,11 +29,11 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<PopularMovies />} />
           <Route path="/:type/:id" element={<MovieDetails />} />
-          <Route path="/series" element={<MainSeries />} />
+          <Route path="/upcoming" element={<UpcomingMovies />} />
           <Route path="/search" element={<Search />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </Context.Provider>
     </BrowserRouter>
   );

@@ -30,7 +30,7 @@ const Navbar = () => {
             <CameraIcon />
           </li>
         </Link>
-        <Link to="/series" className={styles.link}>
+        <Link to="/upcoming" className={styles.link}>
           <li>
             <MonitorIcon />
           </li>

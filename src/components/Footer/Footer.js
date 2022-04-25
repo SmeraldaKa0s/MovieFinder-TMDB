@@ -1,5 +1,4 @@
 import styles from "./styles.module.scss";
-import imageFooter from "../../assets/tmdbLogo.svg";
 import { FaLinkedinIn } from 'react-icons/fa';
 import { VscMail } from 'react-icons/vsc';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';

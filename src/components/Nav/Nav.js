@@ -32,11 +32,11 @@ const Navbar = () => {
         </Link>
         <Link to="/upcoming" className={styles.link}>
           <li>
-            <MonitorIcon />
+            <MonitorIcon className={styles.iconNav} />
           </li>
         </Link>
         {window.location.pathname !== "/search" && (
-          <form className="flex align-center" onSubmit={onSubmit}>
+          <form className={styles.formNav} onSubmit={onSubmit}>
             <button>
               <SearchIcon className="-mr-10 ml-8" />
             </button>

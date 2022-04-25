@@ -1,0 +1,20 @@
+.containerFooter {
+  @apply h-14 border-t border-solid border-b-zinc-300 flex justify-between items-center pr-6 select-none; 
+
+  .boxContact {
+    @apply flex text-4xl;
+    
+    .listFooter {
+      @apply pl-6 pr-6;
+    } 
+  }
+  
+  .boxLinkApi {
+    @apply border-x border-solid border-b-zinc-300 h-full text-4xl flex items-center;
+    a {
+      .icoLinkApi {
+        @apply mx-4;
+      }
+    }
+  }
+}

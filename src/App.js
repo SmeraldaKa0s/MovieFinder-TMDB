@@ -33,7 +33,7 @@ const App = () => {
           <Route path="/search" element={<Search />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </Context.Provider>
     </BrowserRouter>
   );

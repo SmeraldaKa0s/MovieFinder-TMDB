@@ -10,7 +10,8 @@ const Video = ({ handleClickCloseVideo, id }) => {
   const { results } = element
 
   console.log(element, 'element')
-
+  // if (results && !results.length) return null;   
+  
   return (
     <div onClick={handleClickCloseVideo}
       className={styles.modalVideo}>
@@ -21,7 +22,7 @@ const Video = ({ handleClickCloseVideo, id }) => {
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         >
         </iframe>
         :
@@ -29,7 +30,7 @@ const Video = ({ handleClickCloseVideo, id }) => {
           src={`https://player.vimeo.com/video/${results && results[0].key}`}
           className={styles.video}
           allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         >
         </iframe>
       }

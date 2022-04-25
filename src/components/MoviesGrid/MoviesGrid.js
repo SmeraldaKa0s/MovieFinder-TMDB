@@ -10,7 +10,7 @@ const MoviesGrid = ({ movies }) => {
           <ItemMovie
             id={movie.id}
             image={movie.poster_path ? movie.poster_path : movie.backdrop_path}
-            title={movie.name ? movie.name : movie.title}
+            title={movie.title}
             type={movie.name ? 'tv' : 'movie'}
           />
         ))

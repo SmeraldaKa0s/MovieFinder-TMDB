@@ -13,13 +13,24 @@
 
     .title {
       @apply absolute text-5xl text-white;
-      position: absolute;
-      top: 50%;
+      top: 40%;
       left: 10%;
+      filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.5));
+    }
+
+    .buttonCarousel {
+      @apply flex items-center absolute text-2xl text-white ;
+      top: 45%;
+      left: 11%;
       font-family: Nunito;
       filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.5));
     }
-  }
+
+    .icon {
+      @apply text-2xl fill-white;
+      left: 20%;
+    }
+}
 
   .containerImg {
     @apply w-full m-auto;

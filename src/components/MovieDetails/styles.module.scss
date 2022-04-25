@@ -1,0 +1,67 @@
+.containerDetails {
+  @apply flex flex-col relative select-none;
+  height: 85vh;
+
+  img {
+    @apply w-full h-full object-cover;
+    filter: grayscale(70%);
+  }
+
+
+  .boxDetails {
+    @apply flex flex-col bg-zinc-900 bg-opacity-30 pt-5 pl-5;
+    margin-top: -320px;
+    z-index: 20;
+    height: 400px;
+    
+ 
+    .titleDetail {
+      @apply text-3xl text-white font-bold; 
+    }
+
+    .subtitle {
+      @apply text-base  text-white;
+    }
+
+    .positionSubtitle {
+      @apply absolute;
+      top: 65%;
+    }
+  } 
+
+  .titleGenero {
+    @apply text-base font-bold mt-10 text-white;
+  }
+
+  .caption {
+    @apply flex justify-around items-center; 
+    // width: 80%;
+  }
+
+  ul {
+    
+    li {
+       @apply flex items-center font-bold text-white; 
+    }
+  }
+
+
+  p {
+    @apply font-bold text-white; 
+    max-width: 700px;
+  }
+
+  .boxButton {
+    @apply flex items-center rounded-xl p-2 border hover:bg-zinc-900 ease-in-out duration-300 font-bold text-white; 
+    font-family: Nunito;
+
+    .iconTrailer {
+      @apply fill-white;
+    }
+  }
+  
+
+ 
+}
+
+ 

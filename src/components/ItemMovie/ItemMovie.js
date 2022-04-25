@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ItemMovie = props => {
   const { title, image, id, type } = props;
   return (
-    <Link to={`/${type === 'tv' ? 'series' : 'movies'}/${id}`}>
+    <Link to={`/${type}/${id}`}>
       <article className={styles.container}>
         <div className={styles.containerImg}>
           {

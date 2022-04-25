@@ -1,17 +1,26 @@
 .container {
-  @apply flex h-14 bg-gradient-to-t from-transparent  items-center justify-between;
+  @apply flex min-h-min bg-gradient-to-t from-transparent items-center justify-between lg:justify-start flex-wrap select-none;
   border-bottom: 1px solid #EAEAEA;
+  
   ul {
-    @apply flex text-4xl;
+    @apply flex text-4xl w-full lg:w-auto justify-between;
     
     .link {
-      @apply px-6;
+      @apply px-6 py-2;
     }
   }
 
+  form button {
+    @apply text-4xl w-0 h-0;
+  }
+
   .input {
-    @apply bg-transparent text-2xl pl-14 placeholder-white outline-offset-2;
+    @apply bg-transparent text-2xl pl-14 placeholder-white outline-offset-2 w-32 lg:w-40;
     border-left: 1px solid #EAEAEA;
     outline: none;
+  }
+
+  .translate {
+    @apply self-end lg:absolute lg:right-0;
   }
 }

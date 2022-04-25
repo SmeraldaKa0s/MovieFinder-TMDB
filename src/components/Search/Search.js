@@ -33,7 +33,7 @@ const Search = () => {
         onSubmit={handleSubmit}
         className={styles.form}>
         <button className={styles.search}>
-          <SearchIcon  />
+          <SearchIcon />
         </button>
         <input
           type="text"

@@ -1,0 +1,26 @@
+.modalVideo {
+  @apply flex justify-center items-center fixed top-0 left-0 bottom-0 right-0 bg-zinc-900 bg-opacity-70; 
+  z-index: 20; 
+
+
+  .iconVideo {
+    @apply fill-white fixed top-3 right-3 scale-150 rounded-full hover:bg-zinc-900;
+    top: 11%;
+    right: 11%; 
+  }
+
+
+
+
+
+  .video {
+    @apply bg-zinc-900 bg-gradient-to-b from-zinc-900 to-gray-400;
+    width: 70%;
+    height: 70%;
+  }
+
+
+}
+
+
+

@@ -4,6 +4,7 @@ import { useLocation, useSearchParams } from "react-router-dom";
 import { RiSearch2Line as SearchIcon } from "react-icons/ri";
 import useFetch from "../../hooks/useFetch";
 import MoviesGrid from "../MoviesGrid";
+import Error404 from "../Error404/Error404";
 
 const Search = () => {
   const { search } = useLocation();
@@ -46,7 +47,8 @@ const Search = () => {
         results.length ?
           <MoviesGrid movies={results} />
           :
-          <p className="text-4xl">No hay resultados</p>
+          <Error404
+          title="No results" />
       }
     </section>
   );

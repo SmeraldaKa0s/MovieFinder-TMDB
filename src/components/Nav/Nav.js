@@ -7,6 +7,7 @@ import { MdMonitor as MonitorIcon } from "react-icons/md";
 import Translate from "../Translate";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { slide as Menu } from 'react-burger-menu'
 
 const Navbar = () => {
   const [query, setQuery] = useState("");
@@ -18,24 +19,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={styles.container}>
-      <ul>
-        <Link to="/" className={styles.link}>
-          <li>
-            <HomeIcon />
-          </li>
-        </Link>
-        <Link to="/movies" className={styles.link}>
-          <li>
-            <CameraIcon />
-          </li>
-        </Link>
-        <Link to="/upcoming" className={styles.link}>
-          <li>
-            <MonitorIcon className={styles.iconNav} />
-          </li>
-        </Link>
-      </ul>
+    <>
+      <nav className={styles.navBurger}>
+        <Menu>
         {window.location.pathname !== "/search" && (
           <form className={styles.formNav} onSubmit={onSubmit}>
             <button>
@@ -48,10 +34,66 @@ const Navbar = () => {
             />
           </form>
         )}
-      <div  className={styles.translate}>
-        <Translate />
-      </div>
-    </nav>
+
+          <ul>
+            <Link to="/" className={styles.link}>
+              <li>
+                <p>Home</p>
+              </li>
+            </Link>
+            <Link to="/movies" className={styles.link}>
+              <li>
+                <p>Popular Movies</p>
+              </li>
+            </Link>
+            <Link to="/upcoming" className={styles.link}>
+              <li>
+                <p>Upcoming Movies</p>
+              </li>
+            </Link>
+            <div className={styles.translate}>
+              <Translate />
+            </div>
+
+          </ul>
+        </Menu>
+      </nav>
+
+      <nav className={styles.container}>
+        <ul>
+          <Link to="/" className={styles.link}>
+            <li>
+              <HomeIcon />
+            </li>
+          </Link>
+          <Link to="/movies" className={styles.link}>
+            <li>
+              <CameraIcon />
+            </li>
+          </Link>
+          <Link to="/upcoming" className={styles.link}>
+            <li>
+              <MonitorIcon className={styles.iconNav} />
+            </li>
+          </Link>
+        </ul>
+        {window.location.pathname !== "/search" && (
+          <form className={styles.formNav} onSubmit={onSubmit}>
+            <button>
+              <SearchIcon className="-mr-10 ml-3" />
+            </button>
+            <input
+              value={query}
+              onInput={({ target }) => setQuery(target.value)}
+              className={styles.input}
+            />
+          </form>
+        )}
+        <div className={styles.translate}>
+          <Translate />
+        </div>
+      </nav>
+    </>
   );
 };
 

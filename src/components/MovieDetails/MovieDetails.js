@@ -10,6 +10,7 @@ import { BiRadioCircleMarked as CircleIcon } from "react-icons/bi";
 import { useState, useEffect } from "react";
 import { baseUrl, apiKey } from "../../utils/variables";
 import { IoIosArrowForward as ArrowButton } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 const MovieDetails = () => {
   const context = useContext(Context);
@@ -17,6 +18,7 @@ const MovieDetails = () => {
   const { data, isLoading } = useFetch(id, type)
   const { title, name, original_title, overview, genres, poster_path, backdrop_path, release_date } = data;
   const [watchVideo, setWatchVideo] = useState(false);
+  const navigate = useNavigate();
 
   const handleClickOpenVideo = () => {
     setWatchVideo(true);
@@ -25,21 +27,18 @@ const MovieDetails = () => {
     setWatchVideo(false);
   }
 
-
-
+  if (data?.success === false) navigate('/404');
 
   return (
     <>
       <Loader isLoading={isLoading} />
       <div className={styles.containerDetails}>
-        <img src={`${imgUrl}${backdrop_path}`} />
-        {/* <img className="w-full lg:w-2/6" src={`${imgUrl}${poster_path}`} /> */}
+        <img src={`${imgUrl}${backdrop_path || poster_path}`} />
         <div className={styles.boxDetails}>
           <h1 className={styles.titleDetail}>{title && title.toUpperCase()}</h1>
           <div className={styles.positionSubtitle}>
             <small className={`${styles.subtitle} `}>{original_title && original_title.toUpperCase()} {release_date && release_date.slice(0, 4)}</small>
           </div>
-          {/* <h2 className={styles.titleGenero}> {context.language === "es" ? "Géneros" : "Genres"} </h2> */}
           <div className={styles.caption}>
             <ul>
               <h2 className={styles.titleGenero}> {context.language === "es" ? "Géneros" : "Genres"} </h2>

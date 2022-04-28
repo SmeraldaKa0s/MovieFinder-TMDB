@@ -1,0 +1,19 @@
+.containerError {
+  @apply bg-black pt-10 pb-12;
+
+  .boxError {
+    @apply flex justify-center lg:text-3xl mb-10;
+
+    h2 {
+      @apply text-white;
+    }
+
+    h3 {
+      @apply text-white;
+    }
+
+    .iconError {
+      @apply fill-white mx-2;
+    }
+  }
+}

@@ -1,5 +1,23 @@
+.navBurger {
+  @apply lg:hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .container {
-  @apply flex h-14 bg-gradient-to-t from-transparent  items-center justify-between border-b border-solid border-b-zinc-300;
+  @apply lg:flex h-14 bg-gradient-to-t from-transparent  items-center justify-between border-b border-solid border-b-zinc-300 hidden;
   ul {
     @apply flex items-center text-4xl h-full;
     

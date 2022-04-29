@@ -4,22 +4,14 @@
 
 
   .iconVideo {
-    @apply fill-white fixed top-3 right-3 scale-150 rounded-full hover:bg-zinc-900;
-    top: 11%;
+    @apply fill-white fixed scale-150 rounded-full hover:bg-zinc-900;
+    top: 9%;
     right: 11%; 
   }
 
-
-
-
-
   .video {
-    @apply bg-zinc-900 bg-gradient-to-b from-zinc-900 to-gray-400;
-    width: 70%;
-    height: 70%;
+    @apply bg-zinc-900 bg-gradient-to-b from-zinc-900 to-gray-400 w-full md:w-2/3 h-3/4;
   }
-
-
 }
 
 

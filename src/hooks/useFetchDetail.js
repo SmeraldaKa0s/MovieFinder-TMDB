@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { baseUrl, apiKey } from "../utils/variables";
 
-
 const useFetchDetails = (id, subcategory) => {
 
   const [element, setElement] = useState({})
@@ -18,7 +17,5 @@ const useFetchDetails = (id, subcategory) => {
   }, [urlDetail])
   return element
 }
-
-
 
 export default useFetchDetails; 

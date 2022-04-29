@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 
-const Button = ({ title, color = "blue", onClick }) => {
+const Button = ({ title, onClick }) => {
   return (
     <button
       onClick={onClick}

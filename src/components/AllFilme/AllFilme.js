@@ -24,7 +24,7 @@ const AllFilme = ({ title, isLoading, movies }) => {
                   id={movie.id}
                   image={movie.poster_path ? movie.poster_path : movie.backdrop_path}
                   title={movie.title}
-                  type={movie.name ? 'tv' : 'movie'}
+                  type="movie"
                 />
               </SwiperSlide>
             ))}

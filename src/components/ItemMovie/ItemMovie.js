@@ -1,5 +1,7 @@
 import styles from "./styles.module.scss";
 import { Link } from "react-router-dom";
+import imageBroke from "../../assets/imageBroke.jpg";
+import { imgUrl } from "../../utils/variables";
 
 const ItemMovie = props => {
   const { title, image, id, type } = props;
@@ -10,13 +12,13 @@ const ItemMovie = props => {
           {
             image ?
               <img
-                src={`https://image.tmdb.org/t/p/original${image}`}
+                src={`${imgUrl}${image}`}
                 alt={title}
               />
               :
               <img
-                src={`https://www.placecage.com/690/1035 `}
-                alt={title}
+                src={imageBroke}
+                alt="Rota o caida"
               />
           }
         </div>

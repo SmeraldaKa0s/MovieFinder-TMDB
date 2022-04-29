@@ -7,7 +7,6 @@ const Translate = () => {
   const context = useContext(Context);
 
   const handleClickLanguage = (value) => {
-    console.log(value)
     context.setLanguage(value);
   };
 

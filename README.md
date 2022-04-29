@@ -46,6 +46,9 @@ Install the dependencies and  start the server.
 ```
 npm i
 ```
+```
+npm start
+```
 
 
 ## Project

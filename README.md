@@ -2,6 +2,8 @@
 [ ![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alx-l/) [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://es.reactjs.org/) [![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/) [![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/) ![GitHub deployments](https://img.shields.io/github/deployments/SmeraldaKa0s/MovieFinder-TMDB/production?label=Vercel&logo=Vercel&logoColor=Vercel) [![Ada](https://shields.io/badge/-ADA_ITW-ff69b4)](https://adaitw.org/)
 
 
+![screenshot page home](https://github.com/SmeraldaKa0s/MovieFinder-TMDB/blob/master/src/assets/screenTP.png?raw=true)
+
 
 ### _Project of the [ADA ITW ](https://adaitw.org/) Frontend Development Bootcamp_
 

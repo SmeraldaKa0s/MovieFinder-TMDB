@@ -10,7 +10,7 @@ const useFetch = (id, type) => {
 
   const getUrl = () => {
     let url = `https://api.themoviedb.org/3/${type}/${id}${apiKey}&language=${context.language}`
-    if (type === 'search') return `https://api.themoviedb.org/3/search/multi${apiKey}&language=${context.language}&query=${id}`
+    if (type === 'search') return `https://api.themoviedb.org/3/search/movie${apiKey}&language=${context.language}&query=${id}`
 
     return url;
   }

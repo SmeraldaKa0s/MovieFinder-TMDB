@@ -31,8 +31,10 @@ const MovieDetails = () => {
     <>
       <Loader isLoading={isLoading} />
       <div className={styles.containerDetails}>
-        <img src={`${imgUrl}${backdrop_path || poster_path}`}
-          alt={title} />
+        {backdrop_path || poster_path
+          ? <img src={`${imgUrl}${backdrop_path || poster_path}`}
+            alt={title} />
+          : null}
         <div className={styles.boxDetails}>
           <h1 className={styles.titleDetail}>{title && title.toUpperCase()}</h1>
           <small className={`${styles.subtitle} `}>{original_title && original_title.toUpperCase()} {release_date && release_date.slice(0, 4)}</small>

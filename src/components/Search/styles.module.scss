@@ -1,12 +1,12 @@
 .section {
-  @apply flex flex-col justify-center;
+  @apply flex flex-col justify-center select-none;
 
   .form {
-    @apply flex justify-center items-center relative;
+    @apply flex justify-center items-center relative mt-24;
   }
 
   .input {
-    @apply bg-transparent text-2xl pl-14 py-2 placeholder-white my-10 w-full max-w-3xl;
+    @apply bg-transparent  lg:text-2xl pl-14 py-2 placeholder-white my-10 md:max-w-md md:w-full lg:max-w-3xl;
     border-bottom: 3px solid rgba(55, 55, 55, 0.3);
   }
 

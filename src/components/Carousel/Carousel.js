@@ -19,7 +19,11 @@ const Carousel = ({ type }) => {
       spaceBetween={50}
       slidesPerView={1}
       navigation={window && window.innerWidth > 1024}
-      modules={[Navigation, Pagination]}
+      modules={[Navigation, Pagination, Autoplay]}
+      autoplay={{
+        delay: 4000,
+        disableOnInteraction: false,
+      }}
       pagination={{ clickable: true }}
     >
       

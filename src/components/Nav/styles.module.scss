@@ -1,5 +1,73 @@
 .navBurger {
   @apply lg:hidden;
+
+  .linksMobile {
+    li {
+      @apply border-b-zinc-300 font-bold border-t last:border-b py-4 px-6 select-none hover:bg-indigo-50 active:bg-indigo-50 focus:ring;
+    }
+  }
+
+  .translateMobile {
+    @apply flex justify-center mt-60;
+  }
+}
+
+:global(.bm-burger-button) {
+  @apply absolute top-10 left-5 h-5 w-8;
+  
+}
+
+/* Color/shape of burger icon bars */
+:global(.bm-burger-bars) {
+  @apply bg-zinc-900 rounded-lg border border-white;
+}
+
+/* Color/shape of burger icon bars on hover*/
+:global(.bm-burger-bars-hover) {
+  @apply bg-zinc-700;
+}
+
+/* Position and sizing of clickable cross button */
+:global(.bm-cross-button) {
+  @apply h-8 w-8;
+}
+
+/* Color/shape of close button cross */
+:global(.bm-cross) {
+  @apply bg-black;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+:global(.bm-menu-wrap) {
+  @apply fixed h-full;
+}
+
+/* General sidebar styles */
+:global(.bm-menu) {
+  @apply bg-white text-lg;
+}
+
+/* Morph shape necessary with bubble or elastic */
+:global(.bm-morph-shape) {
+  @apply fill-orange-600;
+}
+
+/* Wrapper for item list */
+:global(.bm-item-list) {
+  @apply text-red-600 pt-16;
+}
+
+/* Individual item */
+:global(.bm-item) {
+  @apply inline-block;
+}
+
+/* Styling of overlay */
+:global(.bm-overlay) {
+  @apply bg-zinc-900 bg-opacity-80;
 }
 
 
@@ -8,19 +76,14 @@
 
 
 
-
-
-
-
-
-
-
+// ----------------------------------------------------------------------------
 
 .container {
-  @apply lg:flex h-14 bg-gradient-to-t from-transparent  items-center justify-between border-b border-solid border-b-zinc-300 hidden;
+  @apply lg:flex h-14 bg-gradient-to-t from-transparent items-center border-b border-solid border-b-zinc-300 hidden;
+
   ul {
     @apply flex items-center text-4xl h-full;
-    
+
     .link {
       @apply px-6;
 
@@ -31,12 +94,16 @@
   }
 
   .formNav {
-    @apply flex h-full border-l border-solid border-b-zinc-300 pl-2 hover:bg-zinc-100 active:bg-indigo-50 focus:ring; 
+    @apply flex h-full lg:text-3xl border-l border-solid border-b-zinc-300 pl-2 hover:bg-zinc-100 active:bg-indigo-50 focus:ring;
+
+    button {
+      @apply px-3;
+    }
   }
 
   .input {
-    @apply bg-transparent text-2xl pl-14 placeholder-white outline-offset-2;
-    outline: none;
+    @apply lg:bg-transparent text-lg lg:pl-14 lg:placeholder-white lg:outline-offset-2;
+    outline  : none;
   }
 
   .translate {

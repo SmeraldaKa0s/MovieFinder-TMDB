@@ -6,9 +6,7 @@ import Loader from "../Loader";
 import { useContext } from "react";
 import Context from "../../context/Context";
 import Video from "../Video/Video";
-import { BiRadioCircleMarked as CircleIcon } from "react-icons/bi";
-import { useState, useEffect } from "react";
-import { baseUrl, apiKey } from "../../utils/variables";
+import { useState } from "react";
 import { IoIosArrowForward as ArrowButton } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 
@@ -31,7 +29,7 @@ const MovieDetails = () => {
 
   return (
     <>
-      <Loader isLoading={isLoading} />      
+      <Loader isLoading={isLoading} />
       <div className={styles.containerDetails}>
         <img src={`${imgUrl}${backdrop_path || poster_path}`} />
         <div className={styles.boxDetails}>
@@ -59,22 +57,22 @@ const MovieDetails = () => {
 
 
       <div className={styles.captionMobile}>
-            <ul>
-              <h2 className={styles.titleGeneroMobile}> {context.language === "es" ? "Géneros" : "Genres"} </h2>
-              {genres && genres.map(({ id, name }) => <li key={id}>  ◉ {name}</li>)}
-            </ul>
-            <p>{overview}</p>
-            <button
-              className={styles.boxButtonMobile}
-              onClick={handleClickOpenVideo}>
-              Trailer
-              <ArrowButton className={styles.iconTrailer} />
-            </button>
-          </div>  
-          {watchVideo && <Video
-          handleClickCloseVideo={handleClickCloseVideo}
-          id={id}
-        />}
+        <ul>
+          <h2 className={styles.titleGeneroMobile}> {context.language === "es" ? "Géneros" : "Genres"} </h2>
+          {genres && genres.map(({ id, name }) => <li key={id}>  ◉ {name}</li>)}
+        </ul>
+        <p>{overview}</p>
+        <button
+          className={styles.boxButtonMobile}
+          onClick={handleClickOpenVideo}>
+          Trailer
+          <ArrowButton className={styles.iconTrailer} />
+        </button>
+      </div>
+      {watchVideo && <Video
+        handleClickCloseVideo={handleClickCloseVideo}
+        id={id}
+      />}
     </>
   )
 };

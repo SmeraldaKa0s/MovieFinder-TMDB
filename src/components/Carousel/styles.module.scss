@@ -4,8 +4,7 @@
 
   :global(.swiper-button-next),
   :global(.swiper-button-prev) {
-    @apply hidden lg:block;
-    color: white;
+    @apply hidden lg:block text-white;
     filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.5));
   }
 
@@ -20,8 +19,7 @@
     }
 
     .buttonCarousel {
-      @apply flex items-center absolute text-2xl text-white ml-3;
-      top: 50%;
+      @apply flex items-center absolute text-2xl text-white ml-3 top-1/2;
       left: 11%;
       font-family: Nunito;
       filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.5));

@@ -8,8 +8,11 @@ import Translate from "../Translate";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { slide as Menu } from 'react-burger-menu'
+import { useContext } from "react";
+import Context from "../../context/Context";
 
 const Navbar = () => {
+  const context = useContext(Context);
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
 
@@ -23,24 +26,24 @@ const Navbar = () => {
       <nav className={styles.navBurger}>
         <Menu>
           <ul className={styles.linksMobile}>
-          <Link to="/search" className={styles.link}>
+            <Link to="/search" className={styles.link}>
               <li>
-                <p>Search</p>
+                <p>{context.language === "es" ? "Buscar" : "Search"}</p>
               </li>
             </Link>
             <Link to="/" className={styles.link}>
               <li>
-                <p>Home</p>
+                <p>{context.language === "es" ? "Principal" : "Home"}</p>
               </li>
             </Link>
             <Link to="/movies" className={styles.link}>
               <li>
-                <p>Popular Movies</p>
+                <p>{context.language === "es" ? "Películas Populares" : "Popular Movies"}</p>
               </li>
             </Link>
             <Link to="/upcoming" className={styles.link}>
               <li>
-                <p>Upcoming Movies</p>
+                <p>{context.language === "es" ? "Próximas peliculas" : "Upcoming Movies"}</p>
               </li>
             </Link>
             <div className={styles.translateMobile}>
@@ -55,17 +58,20 @@ const Navbar = () => {
         <ul>
           <Link to="/" className={styles.link}>
             <li>
-              <HomeIcon />
+              <HomeIcon aria-label="home" />
             </li>
           </Link>
           <Link to="/movies" className={styles.link}>
             <li>
-              <CameraIcon />
+              <CameraIcon aria-label="popular movies" />
             </li>
           </Link>
           <Link to="/upcoming" className={styles.link}>
             <li>
-              <MonitorIcon className={styles.iconNav} />
+              <MonitorIcon
+                className={styles.iconNav}
+                aria-label="upcoming movies"
+              />
             </li>
           </Link>
         </ul>

@@ -2,16 +2,13 @@ import styles from "./styles.module.scss";
 import useFetchDetails from "../../hooks/useFetchDetail";
 import { AiOutlineClose as CloseIcon } from "react-icons/ai";
 
-
 const Video = ({ handleClickCloseVideo, id }) => {
-
 
   const element = useFetchDetails(id, "videos")
   const { results } = element
 
-  console.log(element, 'element')
-  if (!results) return null;   
-  
+  if (!results) return null;
+
   return (
     <div onClick={handleClickCloseVideo}
       className={styles.modalVideo}>

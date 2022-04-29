@@ -14,7 +14,7 @@ const MovieDetails = () => {
   const context = useContext(Context);
   const { id, type } = useParams()
   const { data, isLoading } = useFetch(id, type)
-  const { title, name, original_title, overview, genres, poster_path, backdrop_path, release_date } = data;
+  const { title, original_title, overview, genres, poster_path, backdrop_path, release_date } = data;
   const [watchVideo, setWatchVideo] = useState(false);
   const navigate = useNavigate();
 
@@ -31,7 +31,8 @@ const MovieDetails = () => {
     <>
       <Loader isLoading={isLoading} />
       <div className={styles.containerDetails}>
-        <img src={`${imgUrl}${backdrop_path || poster_path}`} />
+        <img src={`${imgUrl}${backdrop_path || poster_path}`}
+          alt={title} />
         <div className={styles.boxDetails}>
           <h1 className={styles.titleDetail}>{title && title.toUpperCase()}</h1>
           <small className={`${styles.subtitle} `}>{original_title && original_title.toUpperCase()} {release_date && release_date.slice(0, 4)}</small>

@@ -31,14 +31,12 @@ const MovieDetails = () => {
 
   return (
     <>
-      <Loader isLoading={isLoading} />
+      <Loader isLoading={isLoading} />      
       <div className={styles.containerDetails}>
         <img src={`${imgUrl}${backdrop_path || poster_path}`} />
         <div className={styles.boxDetails}>
           <h1 className={styles.titleDetail}>{title && title.toUpperCase()}</h1>
-          <div className={styles.positionSubtitle}>
-            <small className={`${styles.subtitle} `}>{original_title && original_title.toUpperCase()} {release_date && release_date.slice(0, 4)}</small>
-          </div>
+          <small className={`${styles.subtitle} `}>{original_title && original_title.toUpperCase()} {release_date && release_date.slice(0, 4)}</small>
           <div className={styles.caption}>
             <ul>
               <h2 className={styles.titleGenero}> {context.language === "es" ? "Géneros" : "Genres"} </h2>
@@ -58,6 +56,25 @@ const MovieDetails = () => {
           id={id}
         />}
       </div>
+
+
+      <div className={styles.captionMobile}>
+            <ul>
+              <h2 className={styles.titleGeneroMobile}> {context.language === "es" ? "Géneros" : "Genres"} </h2>
+              {genres && genres.map(({ id, name }) => <li key={id}>  ◉ {name}</li>)}
+            </ul>
+            <p>{overview}</p>
+            <button
+              className={styles.boxButtonMobile}
+              onClick={handleClickOpenVideo}>
+              Trailer
+              <ArrowButton className={styles.iconTrailer} />
+            </button>
+          </div>  
+          {watchVideo && <Video
+          handleClickCloseVideo={handleClickCloseVideo}
+          id={id}
+        />}
     </>
   )
 };

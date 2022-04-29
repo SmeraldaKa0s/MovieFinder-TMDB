@@ -7,7 +7,6 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi';
 const Footer = () => {
   return (
     <footer className={styles.containerFooter}>
-      {/* <p>Developed by Alekx</p> */}
       <ul className={styles.boxContact}>
         <li className={styles.listFooter}>
           <a href="https://github.com/SmeraldaKa0s/MovieFinder-TMDB"
@@ -30,8 +29,8 @@ const Footer = () => {
       </ul>
       <div className={styles.boxLinkApi}>
         <a href="https://developers.themoviedb.org/3/getting-started/introduction" aria-label="Link">
-          <FiExternalLink className={styles.icoLinkApi} aria-label="link a api"/>
-          </a>
+          <FiExternalLink className={styles.icoLinkApi} aria-label="link a api" />
+        </a>
       </div>
     </footer>
   )

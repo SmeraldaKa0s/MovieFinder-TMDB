@@ -1,3 +1,5 @@
 .button {
-  @apply bg-transparent hover:bg-zinc-900 hover:text-gray-200 font-bold py-2  px-6 h-14 border-x border-solid border-b-zinc-300;
+  @apply  lg:border-zinc-300 bg-zinc-300 border-indigo-100  border border-solid  lg:bg-transparent hover:bg-zinc-900 hover:text-gray-200  text-xs font-bold lg:text-base py-2  px-6 h-14 lg:border-x lg:border-solid;
 }
+
+

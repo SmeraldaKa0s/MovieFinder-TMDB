@@ -22,20 +22,12 @@ const Navbar = () => {
     <>
       <nav className={styles.navBurger}>
         <Menu>
-        {window.location.pathname !== "/search" && (
-          <form className={styles.formNav} onSubmit={onSubmit}>
-            <button>
-              <SearchIcon className="-mr-10 ml-3" />
-            </button>
-            <input
-              value={query}
-              onInput={({ target }) => setQuery(target.value)}
-              className={styles.input}
-            />
-          </form>
-        )}
-
-          <ul>
+          <ul className={styles.linksMobile}>
+          <Link to="/search" className={styles.link}>
+              <li>
+                <p>Search</p>
+              </li>
+            </Link>
             <Link to="/" className={styles.link}>
               <li>
                 <p>Home</p>
@@ -51,7 +43,7 @@ const Navbar = () => {
                 <p>Upcoming Movies</p>
               </li>
             </Link>
-            <div className={styles.translate}>
+            <div className={styles.translateMobile}>
               <Translate />
             </div>
 

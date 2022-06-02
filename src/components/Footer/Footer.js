@@ -9,6 +9,7 @@ const Footer = () => {
     <footer className={styles.containerFooter}>
       <ul className={styles.boxContact}>
         <li className={styles.listFooter}>
+          {/* recorda usar aria label en links que no tienen texto */}
           <a href="https://github.com/SmeraldaKa0s/MovieFinder-TMDB"
             target="_blank">
             <FiGithub aria-label="GitHub" />

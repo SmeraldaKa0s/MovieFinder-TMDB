@@ -11,6 +11,7 @@ import 'swiper/scss/pagination';
 import 'swiper/css/scrollbar';
 
 const Carousel = ({ type }) => {
+  // si no usas isLoading aca, no hace falta importarlo
   const { data: movies, isLoading } = useFetch("now_playing", "movie");
 
   return (
@@ -28,11 +29,14 @@ const Carousel = ({ type }) => {
     >
       
       {
+        // movies siempre es truthy, porque el useFetch retorna un array vacio: este chequeo es innecesario. 
+        // si queres chequear si esta vacio, deberia ser movies.length
         movies && movies.map(({ id, backdrop_path, title }) => (
           <SwiperSlide key={id}>
             <article className={styles.slideCard}>
               <div className={styles.containerImg}>
                 <img
+                // si no esta backdrop path esto rompe: deberias usar tu imagen placeholder aca
                   src={`https://image.tmdb.org/t/p/original${backdrop_path}`}
                   alt={title}
                 />

@@ -18,6 +18,7 @@ const ItemMovie = props => {
               :
               <img
                 src={imageBroke}
+                // excelente
                 alt="Rota o caida"
               />
           }
